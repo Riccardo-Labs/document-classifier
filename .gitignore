@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+
+# Modello ML (generato dal training, non va in repo)
+backend/ml/model.joblib
+
+# Database SQLite (generato a runtime, non va in repo)
+*.db
+
+# Variabili d'ambiente (contengono password)
+backend/.env
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
