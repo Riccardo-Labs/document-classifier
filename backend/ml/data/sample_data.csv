@@ -1,0 +1,126 @@
+text,category
+"Allego la fattura n. 2024/0312 relativa alla fornitura di materiale informatico del mese di marzo. Si prega di procedere con il pagamento entro i termini concordati.",fattura
+"In allegato trovate la nota di credito emessa a storno parziale della fattura 2024/0187. L'importo da rimborsare è di 340,00 euro.",fattura
+"La presente per comunicare che la fattura n. 2024/0445 risulta ancora non saldata. Si prega di provvedere al pagamento entro 7 giorni.",fattura
+"Inviamo fattura elettronica numero 2024/0089 per i servizi di consulenza erogati nel mese di febbraio, per un totale imponibile di 1.800,00 euro.",fattura
+"Si trasmette fattura proforma relativa all'ordine confermato in data 10/03/2024. In attesa di conferma per procedere con la fatturazione definitiva.",fattura
+"Gentile cliente, la fattura 2024/0567 emessa il 15 marzo è in scadenza il 15 aprile. Si ricorda di effettuare il bonifico alle coordinate bancarie indicate.",fattura
+"Allego ricevuta di pagamento relativa alla fattura 2024/0230. Il versamento è stato effettuato in data odierna tramite bonifico bancario.",fattura
+"Si comunica che la fattura 2024/0310 presenta un errore nell'aliquota IVA applicata. Si prega di emettere nota di variazione e nuova fattura corretta.",fattura
+"Inviamo il riepilogo delle fatture in scadenza nel mese di aprile. Si prega di pianificare i pagamenti di conseguenza.",fattura
+"La fattura n. 2024/0401 relativa ai canoni di manutenzione annuale è stata emessa oggi. Importo totale: 960,00 euro IVA inclusa.",fattura
+"Allego fattura per l'acquisto di 50 licenze software come da ordine d'acquisto ODA-2024-0089. Pagamento a 30 giorni dalla data di emissione.",fattura
+"Si trasmette fattura elettronica per i lavori di installazione completati in data 8 marzo. Totale fatturato: 2.450,00 euro + IVA.",fattura
+"In riferimento alla vostra richiesta, si allega copia conforme della fattura 2024/0102 per eventuali necessità amministrative.",fattura
+"La fattura 2024/0500 relativa alla fornitura di cancelleria è disponibile nel portale fornitori. Si prega di scaricarla e archiviarla.",fattura
+"Notifica automatica: fattura 2024/0388 in scadenza domani. Importo: 715,00 euro. Coordinate bancarie in allegato.",fattura
+"Si emette fattura per il servizio di trasloco aziendale eseguito il 5 marzo. L'importo totale è di 3.200,00 euro IVA esclusa.",fattura
+"Inviamo estratto conto con dettaglio delle fatture emesse nel primo trimestre 2024 e relativo stato dei pagamenti.",fattura
+"La fattura 2024/0270 è stata respinta dal sistema SDI. Si allega il file XML corretto da utilizzare per la ritrasmissione.",fattura
+"Gentile fornitore, confermamo la ricezione della fattura 2024/0344. Il pagamento è pianificato per il 30 aprile.",fattura
+"Allego fattura per i servizi di pulizia e sanificazione degli uffici relativi al mese di marzo. Importo: 480,00 euro.",fattura
+"Si invia fattura per il noleggio mensile dei dispositivi mobili aziendali. Il canone mensile è di 1.200,00 euro + IVA.",fattura
+"La fattura 2024/0411 è stata emessa con scadenza a 60 giorni. Si prega di aggiornare il piano di pagamento.",fattura
+"Trasmettiamo fattura relativa alla fornitura di energia elettrica per la sede di Milano. Competenza: marzo 2024.",fattura
+"Si allega fattura per i servizi di formazione erogati al team commerciale in data 12 marzo. Totale: 1.600,00 euro.",fattura
+"Inviamo fattura per il servizio di vigilanza notturna del mese di marzo. Importo mensile concordato: 850,00 euro.",fattura
+"Il server non risponde da stamattina alle 9. Ho provato a riavviarlo ma il problema persiste. Potete intervenire urgentemente?",supporto_tecnico
+"Salve, non riesco ad accedere alla VPN aziendale dal mio portatile. Ho già reinstallato il client ma il login fallisce con errore 403.",supporto_tecnico
+"La stampante di rete del piano 3 non viene rilevata dai computer. Ieri funzionava regolarmente. Come posso risolvere?",supporto_tecnico
+"Il gestionale si blocca ogni volta che cerco di esportare un report in PDF. Ho provato su due computer diversi con lo stesso risultato.",supporto_tecnico
+"Buongiorno, ho dimenticato la password del portale e il link di recupero non arriva alla mia email. Potete resettarla manualmente?",supporto_tecnico
+"L'aggiornamento di Windows installato ieri ha reso lentissimo il PC. Il collega ha lo stesso problema. È possibile un rollback?",supporto_tecnico
+"Il monitor del mio workstation mostra dei pixel morti al centro dello schermo. Richiedete la sostituzione in garanzia?",supporto_tecnico
+"Non riesco ad aprire i file .xlsx condivisi su Teams. Il messaggio di errore dice che il file è in uso da un altro utente.",supporto_tecnico
+"Il lettore di badge all'ingresso della sala server non funziona. Siamo bloccati fuori dalla stanza. Intervento urgente.",supporto_tecnico
+"Buongiorno, la connessione internet in ufficio è molto instabile dalle 14 di ieri. Il traffico VoIP è inutilizzabile.",supporto_tecnico
+"Ho ricevuto un'email sospetta con allegato. Ho cliccato per sbaglio sull'allegato. Cosa devo fare? Devo spegnere il computer?",supporto_tecnico
+"Il software di contabilità dà un errore di database all'avvio: 'connection timeout'. Nessun altro ha questo problema.",supporto_tecnico
+"Non riesco a configurare l'account email sul nuovo smartphone aziendale. Ho seguito le istruzioni ma la sincronizzazione non parte.",supporto_tecnico
+"Il disco esterno di backup non viene riconosciuto dal server. L'ultimo backup confermato è di 3 giorni fa.",supporto_tecnico
+"Richiedo la creazione di un nuovo utente nel sistema gestionale per la collega appena assunta. Nome: Laura Ferretti.",supporto_tecnico
+"Il proiettore della sala riunioni B non si collega al laptop tramite HDMI. Abbiamo una presentazione tra un'ora.",supporto_tecnico
+"Il firewall sta bloccando l'accesso a un sito necessario per il lavoro. Potete aggiungere un'eccezione per il dominio indicato?",supporto_tecnico
+"La webcam integrata non funziona durante le videochiamate su Teams. Il driver risulta aggiornato.",supporto_tecnico
+"Segnalo che il certificato SSL del sito intranet è scaduto. I browser mostrano avviso di sicurezza.",supporto_tecnico
+"Ho perso l'accesso alla cartella condivisa \\server\Progetti dopo la migrazione di ieri. Nessun collega ha questo problema.",supporto_tecnico
+"Il notebook aziendale si spegne improvvisamente dopo circa 20 minuti di utilizzo. La batteria è al 100%.",supporto_tecnico
+"Richiedo assistenza per l'installazione del nuovo software di archiviazione documentale su 5 postazioni dell'ufficio acquisti.",supporto_tecnico
+"Il sistema di timbrature non registra le presenze da stamattina. I dipendenti non riescono a timbrare l'entrata.",supporto_tecnico
+"Non riesco a scaricare gli allegati dalle email su Outlook. L'errore indica spazio su disco insufficiente, ma ho 50 GB liberi.",supporto_tecnico
+"Il mouse wireless smette di funzionare ogni pochi minuti. Ho sostituito le batterie ma il problema persiste.",supporto_tecnico
+"Gentile team commerciale, siamo interessati a ricevere un preventivo per la fornitura di 200 sedie ergonomiche per i nostri uffici.",richiesta_commerciale
+"Siamo una società di logistica con 80 dipendenti. Vorremmo valutare una vostra offerta per la gestione della flotta aziendale.",richiesta_commerciale
+"Vi contatto per richiedere informazioni sui vostri piani di abbonamento per il software di gestione progetti. Quante licenze posso acquistare?",richiesta_commerciale
+"Siamo interessati a instaurare un rapporto di fornitura continuativa per i prodotti della vostra linea ecologica. Potete inviarci il listino prezzi?",richiesta_commerciale
+"Richiediamo offerta per la fornitura annuale di materiale di consumo per stampanti: carta, toner e cartucce per 12 postazioni.",richiesta_commerciale
+"La nostra azienda sta valutando un cambio di fornitore per i servizi di telecomunicazione. Possiamo fissare un appuntamento commerciale?",richiesta_commerciale
+"Vi scrivo per richiedere un preventivo personalizzato per l'organizzazione di un evento aziendale per 150 persone.",richiesta_commerciale
+"Siamo interessati ai vostri servizi di facility management. Potete indicarci i costi per la gestione di una sede di 2.000 mq?",richiesta_commerciale
+"Richiediamo catalogo aggiornato e listino prezzi per la linea di arredi da ufficio. Siamo in fase di ristrutturazione della sede.",richiesta_commerciale
+"Vorremmo attivare un contratto di manutenzione per i nostri 30 climatizzatori. Quali sono le condizioni per un accordo pluriennale?",richiesta_commerciale
+"Siamo un'azienda farmaceutica e cerchiamo un fornitore certificato per la distribuzione di dispositivi medici. Siete interessati?",richiesta_commerciale
+"Vi chiedo disponibilità per una demo del vostro CRM. Siamo un team di 15 commerciali e stiamo valutando diversi prodotti.",richiesta_commerciale
+"Richiederei un preventivo per la stampa di 5.000 brochure promozionali a colori, formato A4 piegate a tre ante.",richiesta_commerciale
+"Siamo interessati a sottoscrivere un contratto di outsourcing IT per la nostra filiale di Bologna. Potete inviarci una proposta?",richiesta_commerciale
+"Vorremmo acquistare un sistema di videosorveglianza per 3 sedi aziendali. Quanti punti di ripresa copre la vostra soluzione base?",richiesta_commerciale
+"Richiedo informazioni sui vostri corsi di formazione professionale. Avete programmi dedicati per team di vendita?",richiesta_commerciale
+"La nostra cooperativa è interessata a un accordo quadro per la fornitura di pasti aziendali. Operate anche in provincia di Bergamo?",richiesta_commerciale
+"Vi contatto per verificare la disponibilità di un software di firma digitale per 50 utenti con fatturazione annuale.",richiesta_commerciale
+"Siamo in fase di gara per la scelta di un partner logistico. Potete inviarci la vostra brochure aziendale e le referenze?",richiesta_commerciale
+"Richiediamo un preventivo per la verniciatura esterna della nostra sede di 800 mq. Lavori da eseguire entro giugno.",richiesta_commerciale
+"Vi scrivo per conoscere le condizioni commerciali per la distribuzione dei vostri prodotti nel canale retail del nord-est Italia.",richiesta_commerciale
+"Siamo interessati a un servizio di noleggio a lungo termine per 10 autovetture aziendali di categoria media.",richiesta_commerciale
+"Vorremmo valutare la vostra piattaforma e-learning per la formazione continua dei nostri 200 dipendenti.",richiesta_commerciale
+"Richiedo informazioni sui vostri piani tariffari per il servizio di cloud backup. Abbiamo circa 5 TB di dati critici.",richiesta_commerciale
+"Siamo una startup e vorremmo conoscere le vostre condizioni per start-up nella fornitura di servizi di contabilità esternalizzata.",richiesta_commerciale
+"Scrivo per segnalare un grave disservizio: l'ordine n. 2024-0892 è arrivato con 3 articoli sbagliati e uno danneggiato. Chiedo sostituzione immediata.",reclamo
+"Il tecnico intervenuto il 14 marzo ha lasciato i lavori a metà senza avvisare. Siamo bloccati da due giorni. Chiedo spiegazioni e rimborso.",reclamo
+"Ho acquistato un abbonamento premium il mese scorso ma le funzionalità avanzate non sono mai state attivate. Voglio un rimborso.",reclamo
+"La spedizione è arrivata con 10 giorni di ritardo rispetto ai tempi comunicati. Questo ritardo ha causato una perdita economica misurabile.",reclamo
+"Il servizio clienti non risponde da 5 giorni alla mia email. Non è accettabile per un fornitore con cui abbiamo un contratto attivo.",reclamo
+"La qualità dei prodotti ricevuti nell'ultimo ordine è nettamente inferiore rispetto ai campioni approvati. Chiedo verifica e reso.",reclamo
+"Il vostro installatore ha danneggiato il controsoffitto durante i lavori del 10 marzo. Allego foto e chiedo risarcimento danni.",reclamo
+"Il canone mensile è stato addebitato due volte a marzo. Chiedo il rimborso immediato del doppio addebito e verifica dell'errore.",reclamo
+"Il contratto firmato prevedeva 10 ore di supporto mensile incluse. Nell'ultimo mese non abbiamo ricevuto alcuna risposta in tempi utili.",reclamo
+"Il software che ci avete venduto non è compatibile con il nostro sistema operativo, contrariamente a quanto dichiarato dal vostro commerciale.",reclamo
+"Ho segnalato lo stesso problema tre volte nelle ultime due settimane senza alcuna risoluzione. La situazione è insostenibile.",reclamo
+"Il corriere convenzionato ha consegnato il pacco a un indirizzo errato. Il materiale non è ancora stato recuperato dopo 4 giorni.",reclamo
+"La vostra piattaforma è stata irraggiungibile per 6 ore lavorative il 18 marzo. Questo ha compromesso la nostra operatività.",reclamo
+"Il prodotto ricevuto non corrisponde alle specifiche tecniche indicate nel vostro catalogo. Chiedo sostituzione o rimborso.",reclamo
+"Nonostante la segnalazione del 5 marzo, il problema con il sistema di fatturazione non è stato ancora risolto. Formalizziamo reclamo.",reclamo
+"Il preventivo accettato era di 4.200 euro. La fattura emessa riporta 5.100 euro senza alcuna comunicazione preventiva. Chiedo rettifica.",reclamo
+"Il personale intervenuto per la manutenzione non era qualificato e ha peggiorato il guasto esistente. Chiedo intervento urgente specializzato.",reclamo
+"Abbiamo ricevuto merce scaduta. Il lotto indicato sulle confezioni ha data di scadenza gennaio 2024. Ritiro urgente richiesto.",reclamo
+"Il vostro sistema di ticketing ci ha assegnato una priorità bassa nonostante l'urgenza segnalata. Chiedo escalation immediata.",reclamo
+"Formalizzo reclamo scritto per il mancato rispetto del SLA contrattuale nel mese di febbraio. Tempo medio di risposta: 48h vs 4h previste.",reclamo
+"Il tecnico assegnato non si è presentato all'appuntamento delle 9 senza alcun avviso. Ho aspettato inutilmente per 3 ore.",reclamo
+"Il materiale consegnato era privo di documentazione tecnica, obbligatoria per la conformità CE. Chiedo invio immediato.",reclamo
+"Siete impossibili da raggiungere telefonicamente. In 3 giorni ho provato 12 chiamate senza risposta. Questo non è un servizio accettabile.",reclamo
+"La vostra app mobile si blocca ogni volta che tentiamo di aprire un documento allegato. Il problema esiste da due aggiornamenti.",reclamo
+"Segnalo che il defibrillatore installato dalla vostra società risulta non funzionante al test mensile. Intervento urgente richiesto.",reclamo
+"Vi informo che a partire dal 1° aprile cambierà il referente aziendale per le comunicazioni amministrative. Nuovo contatto: Marco Bianchi.",altro
+"Comunico che l'ufficio sarà chiuso il 25 aprile per festività nazionale. Le attività riprenderanno regolarmente il 26 aprile.",altro
+"In allegato trovate la nostra policy aggiornata sulla privacy e il trattamento dei dati personali ai sensi del GDPR.",altro
+"Vi comunichiamo che la nostra azienda ha cambiato ragione sociale da gennaio 2024. I dati fiscali rimangono invariati.",altro
+"Si comunica che il numero di telefono della sede centrale è cambiato. Il nuovo numero è attivo da oggi.",altro
+"Informiamo che il nostro magazzino di Torino sarà temporaneamente chiuso dal 20 al 27 marzo per lavori strutturali.",altro
+"Alleghiamo il verbale della riunione del 12 marzo per presa visione e archivio.",altro
+"Vi trasmettiamo copia del certificato di iscrizione alla Camera di Commercio aggiornato al 2024.",altro
+"Comunichiamo l'apertura della nostra nuova sede operativa a Napoli a partire dal 15 aprile.",altro
+"Si allega DURC in corso di validità come da richiesta pervenuta in data odierna.",altro
+"Inviamo i dati aggiornati per la compilazione dell'anagrafica fornitore nel vostro sistema.",altro
+"Vi comunichiamo che il nostro sito web è stato aggiornato con il nuovo catalogo prodotti 2024.",altro
+"Alleghiamo il modulo di delega firmato per la partecipazione all'assemblea del 20 marzo.",altro
+"Si trasmette dichiarazione antimafia e documentazione antimonopolio come richiesto dalla procedura di qualifica.",altro
+"Vi informiamo che la nostra certificazione ISO 9001 è stata rinnovata con validità fino al 2027.",altro
+"Comunico che sarò in ferie dal 25 marzo al 5 aprile. Per urgenze fare riferimento al collega Andrea Russo.",altro
+"In allegato il modulo compilato per la richiesta di accreditamento come fornitore omologato.",altro
+"Vi trasmettiamo il report mensile delle attività svolte come da contratto, relativo al mese di marzo.",altro
+"Si comunica che l'assemblea dei soci è convocata per il 10 aprile alle ore 10:00 presso la sede legale.",altro
+"Inviamo aggiornamento sull'avanzamento del progetto come concordato nella riunione del 5 marzo.",altro
+"Vi comunichiamo che il nostro responsabile commerciale ha lasciato l'azienda. Nuovo referente: Giulia Marini.",altro
+"Alleghiamo la visura camerale aggiornata richiesta per la gara d'appalto in scadenza il 31 marzo.",altro
+"Si informa che il sistema di prenotazione sale riunioni sarà in manutenzione sabato mattina.",altro
+"Vi trasmettiamo l'invito ufficiale all'evento di inaugurazione della nuova sede, previsto per il 18 aprile.",altro
+"Comunichiamo che abbiamo aggiornato le nostre coordinate bancarie. Si prega di aggiornare i dati nei vostri sistemi.",altro
