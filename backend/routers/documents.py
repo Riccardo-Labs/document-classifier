@@ -65,6 +65,7 @@ def review_document(doc_id: int, payload: ReviewRequest, session: Session = Depe
     """
     doc = session.get(Document, doc_id)
     if not doc:
+        # Restituisce 404 con messaggio leggibile se il documento non esiste nel DB
         raise HTTPException(status_code=404, detail="Documento non trovato")
 
     doc.reviewed_category = payload.reviewed_category
