@@ -45,7 +45,8 @@ export default function App() {
   }
 
   // DocTable chiama questa funzione dopo una revisione manuale:
-  // sostituisce il documento aggiornato nella lista senza chiamate aggiuntive al backend
+  // sostituisce il documento aggiornato nella lista senza chiamate aggiuntive al backend.
+  // La lista viene aggiornata in modo immutabile tramite map per triggerare il re-render.
   function handleReviewed(updatedDoc) {
     setDocuments((prev) => prev.map((d) => (d.id === updatedDoc.id ? updatedDoc : d)));
   }
