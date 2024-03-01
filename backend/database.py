@@ -9,7 +9,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Legge la stringa di connessione dall'ambiente.
-# Il valore di default è usato solo se .env non è presente.
+# Migrato da PostgreSQL a SQLite per eliminare dipendenze esterne in locale.
+# Il valore di default punta al file SQLite nella directory di lavoro.
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./database.db")
 
 
