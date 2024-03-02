@@ -42,6 +42,7 @@ def health():
     """
     Endpoint di health check usato da Railway e servizi di monitoraggio
     per verificare che il server sia attivo e il modello ML caricato.
+    Risponde su GET /health senza autenticazione.
     """
     return {
         "status": "ok",
