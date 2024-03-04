@@ -21,11 +21,14 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="Internal Document Routing Tool", version="1.0.0", lifespan=lifespan)
 
-# CORS: permette al frontend (porta 5173) di chiamare il backend (porta 8000).
+# CORS: permette al frontend (locale e Vercel) di chiamare il backend.
 # Senza questo middleware il browser blocca le richieste cross-origin.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://document-classifier-6hyi.vercel.app",
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
