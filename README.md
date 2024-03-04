@@ -1,8 +1,10 @@
 # Document Routing Tool
 
-A full-stack web app that automatically classifies Italian business documents into predefined categories using **local machine learning** (scikit-learn), stores them in PostgreSQL, and displays them in a React dashboard.
+A full-stack web app that automatically classifies Italian business documents into predefined categories using **local machine learning** (scikit-learn), stores them in SQLite, and displays them in a React dashboard.
 
 No external APIs, no cloud ML services, no infrastructure costs — everything runs locally.
+
+**Deploy:** Backend su Railway · Frontend su Vercel
 
 ---
 
