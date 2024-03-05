@@ -75,7 +75,11 @@ export default function DocTable({ documents, filterCategory, onFilterChange, on
 
                   <td style={styles.td}>{doc.predicted_category}</td>
 
-                  <td style={styles.td}>{(doc.confidence_score * 100).toFixed(1)}%</td>
+                  <td style={styles.td}>
+                    <span style={confidenceStyle(doc.confidence_score)}>
+                      {(doc.confidence_score * 100).toFixed(1)}%
+                    </span>
+                  </td>
 
                   {/* In modifica mostra il select; altrimenti il valore o un trattino se non ancora revisionato */}
                   <td style={styles.td}>
@@ -120,6 +124,12 @@ export default function DocTable({ documents, filterCategory, onFilterChange, on
       )}
     </section>
   );
+}
+
+function confidenceStyle(score) {
+  const color = score > 0.80 ? "#0f5132" : score >= 0.50 ? "#856404" : "#842029";
+  const bg    = score > 0.80 ? "#d1e7dd" : score >= 0.50 ? "#fff3cd" : "#f8d7da";
+  return { background: bg, color, padding: "2px 8px", borderRadius: 10, fontSize: "0.8rem", fontWeight: 600 };
 }
 
 const styles = {
