@@ -1,20 +1,22 @@
-# Document Routing Tool
+# Document Classifier
 
 A full-stack web app that automatically classifies Italian business documents into predefined categories using **local machine learning** (scikit-learn), stores them in SQLite, and displays them in a React dashboard.
 
 No external APIs, no cloud ML services, no infrastructure costs — everything runs locally.
 
-**Deploy:** Backend su Railway · Frontend su Vercel
+**Live demo:** [document-classifier-6hyi.vercel.app](https://document-classifier-6hyi.vercel.app) · Backend su Railway · Frontend su Vercel
 
 ---
 
 ## Features
 
 - **Automatic classification** — Submit a document and get an instant category prediction with a confidence score
-- **Document management** — Filterable, sortable table with inline category editing
+- **Confidence score with color** — Green > 80%, yellow 50–80%, red < 50% for immediate quality feedback
+- **Document management** — Filterable table with inline category editing
 - **Manual review workflow** — Correct any prediction; reviewed documents are visually highlighted
 - **Statistics dashboard** — Real-time category distribution with proportional bar charts
 - **REST API** — Fully documented via Swagger UI and ReDoc
+- **Demo data** — 15 pre-loaded example documents (3 per category) visible on first visit
 
 ---
 
@@ -24,7 +26,7 @@ No external APIs, no cloud ML services, no infrastructure costs — everything r
 |---|---|
 | Frontend | React 18 + Vite 5 |
 | Backend | Python 3.11 + FastAPI |
-| Database | PostgreSQL + SQLModel (ORM) |
+| Database | SQLite + SQLModel (ORM) |
 | ML Pipeline | scikit-learn — TF-IDF + Logistic Regression |
 | Model serialization | joblib |
 
@@ -47,7 +49,7 @@ The model is trained on 125 labeled Italian-language examples and achieves ~92% 
 ## Project Structure
 
 ```
-routing-tool-v1/
+document-classifier/
 ├── start.sh                      # Quick start (Git Bash / macOS / Linux)
 ├── start.bat                     # Quick start (Windows CMD)
 ├── backend/
@@ -56,6 +58,7 @@ routing-tool-v1/
 │   ├── models.py                 # Document table
 │   ├── schemas.py                # Pydantic request/response schemas
 │   ├── classifier.py             # Model loading + prediction
+│   ├── seed.py                   # Pre-populates DB with 15 example documents
 │   ├── requirements.txt
 │   ├── .env.example
 │   ├── routers/
@@ -71,7 +74,7 @@ routing-tool-v1/
         ├── api/client.js         # HTTP client
         └── components/
             ├── DocForm.jsx       # Document submission form
-            ├── DocTable.jsx      # Table with filter and inline edit
+            ├── DocTable.jsx      # Table with filter, inline edit and confidence colors
             └── Stats.jsx         # Category stats with bar charts
 ```
 
@@ -82,27 +85,20 @@ routing-tool-v1/
 ### Prerequisites
 - Python 3.10+
 - Node.js 18+
-- PostgreSQL running locally
 
-### 1. Create the database
-
-```sql
-CREATE DATABASE routing_tool;
-```
-
-### 2. Configure environment variables
+### 1. Configure environment variables
 
 ```bash
 cd backend
 cp .env.example .env
 ```
 
-Edit `.env`:
+The default `.env` uses SQLite — no database server needed:
 ```
-DATABASE_URL=postgresql://<user>:<password>@localhost:5432/routing_tool
+DATABASE_URL=sqlite:///./database.db
 ```
 
-### 3. Train the ML model
+### 2. Train the ML model
 
 ```bash
 cd backend
@@ -112,6 +108,12 @@ source .venv/Scripts/activate  # Windows Git Bash
 
 pip install -r requirements.txt
 python ml/training.py
+```
+
+### 3. (Optional) Seed the database with example documents
+
+```bash
+python seed.py
 ```
 
 ### 4. Install frontend dependencies
@@ -157,6 +159,7 @@ cd frontend && npm run dev
 | `GET` | `/documents` | List documents (supports `?category=fattura`) |
 | `PATCH` | `/documents/{id}/review` | Manually correct a category |
 | `GET` | `/stats/categories` | Document count per category |
+| `GET` | `/health` | Health check — returns server status and model state |
 
 **Example — classify a document:**
 
