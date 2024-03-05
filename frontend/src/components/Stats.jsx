@@ -14,8 +14,8 @@ export default function Stats({ stats }) {
   const total = stats.reduce((sum, s) => sum + s.count, 0); // denominatore per le percentuali
 
   return (
-    <section style={{ marginBottom: "2rem" }}>
-      <h2>Statistiche per categoria</h2>
+    <section>
+      <h2 style={{ margin: "0 0 1rem", fontSize: "1.1rem", fontWeight: 600, color: "#1e293b" }}>Statistiche per categoria</h2>
       <table style={styles.table}>
         <thead>
           <tr>

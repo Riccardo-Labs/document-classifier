@@ -39,7 +39,7 @@ export default function DocTable({ documents, filterCategory, onFilterChange, on
 
   return (
     <section style={{ marginBottom: "2rem" }}>
-      <h2>Documenti classificati</h2>
+      <h2 style={{ margin: "0 0 1rem", fontSize: "1.1rem", fontWeight: 600, color: "#1e293b" }}>Documenti classificati</h2>
 
       <label style={{ fontWeight: 500 }}>
         Filtra per categoria:{" "}
@@ -73,7 +73,9 @@ export default function DocTable({ documents, filterCategory, onFilterChange, on
                     {doc.title}
                   </td>
 
-                  <td style={styles.td}>{doc.predicted_category}</td>
+                  <td style={styles.td}>
+                    <span style={categoryStyle(doc.predicted_category)}>{doc.predicted_category}</span>
+                  </td>
 
                   <td style={styles.td}>
                     <span style={confidenceStyle(doc.confidence_score)}>
@@ -126,6 +128,19 @@ export default function DocTable({ documents, filterCategory, onFilterChange, on
   );
 }
 
+const CATEGORY_COLORS = {
+  fattura:               { bg: "#dbeafe", color: "#1e40af" },
+  supporto_tecnico:      { bg: "#fce7f3", color: "#9d174d" },
+  richiesta_commerciale: { bg: "#d1fae5", color: "#065f46" },
+  reclamo:               { bg: "#fee2e2", color: "#991b1b" },
+  altro:                 { bg: "#e5e7eb", color: "#374151" },
+};
+
+function categoryStyle(cat) {
+  const c = CATEGORY_COLORS[cat] || { bg: "#e5e7eb", color: "#374151" };
+  return { background: c.bg, color: c.color, padding: "2px 10px", borderRadius: 10, fontSize: "0.78rem", fontWeight: 600, whiteSpace: "nowrap" };
+}
+
 function confidenceStyle(score) {
   const color = score > 0.80 ? "#0f5132" : score >= 0.50 ? "#856404" : "#842029";
   const bg    = score > 0.80 ? "#d1e7dd" : score >= 0.50 ? "#fff3cd" : "#f8d7da";
@@ -134,13 +149,13 @@ function confidenceStyle(score) {
 
 const styles = {
   table:         { width: "100%", borderCollapse: "collapse", fontSize: "0.9rem" },
-  th:            { textAlign: "left", padding: "0.5rem 0.75rem", borderBottom: "2px solid #ddd", whiteSpace: "nowrap" },
-  td:            { padding: "0.45rem 0.75rem", borderBottom: "1px solid #eee", verticalAlign: "middle" },
-  reviewedRow:   { backgroundColor: "#f6fff6" },
-  select:        { padding: "0.25rem 0.4rem", fontSize: "0.9rem" },
-  badgeNew:      { background: "#fff3cd", color: "#856404", padding: "2px 8px", borderRadius: 10, fontSize: "0.8rem" },
-  badgeReviewed: { background: "#d1e7dd", color: "#0f5132", padding: "2px 8px", borderRadius: 10, fontSize: "0.8rem" },
-  btnEdit:       { padding: "3px 10px", cursor: "pointer" },
-  btnSave:       { padding: "3px 10px", cursor: "pointer", marginRight: 4, fontWeight: 600 },
-  btnCancel:     { padding: "3px 10px", cursor: "pointer", color: "#666" },
+  th:            { textAlign: "left", padding: "0.5rem 0.75rem", borderBottom: "2px solid #e2e8f0", whiteSpace: "nowrap", color: "#64748b", fontSize: "0.82rem", textTransform: "uppercase", letterSpacing: "0.04em" },
+  td:            { padding: "0.55rem 0.75rem", borderBottom: "1px solid #f1f5f9", verticalAlign: "middle" },
+  reviewedRow:   { backgroundColor: "#f0fdf4" },
+  select:        { padding: "0.25rem 0.4rem", fontSize: "0.9rem", borderRadius: 4, border: "1px solid #d1d5db" },
+  badgeNew:      { background: "#fff3cd", color: "#856404", padding: "2px 8px", borderRadius: 10, fontSize: "0.78rem", fontWeight: 600 },
+  badgeReviewed: { background: "#d1e7dd", color: "#0f5132", padding: "2px 8px", borderRadius: 10, fontSize: "0.78rem", fontWeight: 600 },
+  btnEdit:       { padding: "4px 12px", cursor: "pointer", fontSize: "0.85rem", border: "1px solid #d1d5db", borderRadius: 5, background: "#fff" },
+  btnSave:       { padding: "4px 12px", cursor: "pointer", marginRight: 4, fontWeight: 600, fontSize: "0.85rem", background: "#1e293b", color: "#fff", border: "none", borderRadius: 5 },
+  btnCancel:     { padding: "4px 12px", cursor: "pointer", color: "#64748b", fontSize: "0.85rem", border: "1px solid #d1d5db", borderRadius: 5, background: "#fff" },
 };
