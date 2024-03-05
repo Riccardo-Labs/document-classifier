@@ -38,17 +38,18 @@ export default function DocTable({ documents, filterCategory, onFilterChange, on
   }
 
   return (
-    <section style={{ marginBottom: "2rem" }}>
-      <h2 style={{ margin: "0 0 1rem", fontSize: "1.1rem", fontWeight: 600, color: "#1e293b" }}>Documenti classificati</h2>
-
-      <label style={{ fontWeight: 500 }}>
-        Filtra per categoria:{" "}
-        <select value={filterCategory} onChange={(e) => onFilterChange(e.target.value)} style={styles.select}>
-          {CATEGORIES.map((c) => (
-            <option key={c} value={c}>{c || "— tutte —"}</option>
-          ))}
-        </select>
-      </label>
+    <section>
+      <div style={styles.header}>
+        <h2 style={styles.heading}>Documenti classificati</h2>
+        <label style={styles.filterLabel}>
+          Categoria:{" "}
+          <select value={filterCategory} onChange={(e) => onFilterChange(e.target.value)} style={styles.select}>
+            {CATEGORIES.map((c) => (
+              <option key={c} value={c}>{c || "— tutte —"}</option>
+            ))}
+          </select>
+        </label>
+      </div>
 
       {documents.length === 0 ? (
         <p style={{ color: "#888", marginTop: "1rem" }}>Nessun documento trovato.</p>
@@ -148,6 +149,9 @@ function confidenceStyle(score) {
 }
 
 const styles = {
+  header:      { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" },
+  heading:     { margin: 0, fontSize: "1.1rem", fontWeight: 600, color: "#1e293b" },
+  filterLabel: { display: "flex", alignItems: "center", gap: 8, fontSize: "0.88rem", fontWeight: 500, color: "#64748b" },
   table:         { width: "100%", borderCollapse: "collapse", fontSize: "0.9rem" },
   th:            { textAlign: "left", padding: "0.5rem 0.75rem", borderBottom: "2px solid #e2e8f0", whiteSpace: "nowrap", color: "#64748b", fontSize: "0.82rem", textTransform: "uppercase", letterSpacing: "0.04em" },
   td:            { padding: "0.55rem 0.75rem", borderBottom: "1px solid #f1f5f9", verticalAlign: "middle" },
