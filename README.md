@@ -1,22 +1,16 @@
 # Document Classifier
 
-A full-stack web app that automatically classifies Italian business documents into predefined categories using **local machine learning** (scikit-learn), stores them in SQLite, and displays them in a React dashboard.
+A full-stack web app that automatically classifies Italian business documents using **local machine learning** (scikit-learn). No external APIs, no cloud ML — everything runs on your own infrastructure.
 
-No external APIs, no cloud ML services, no infrastructure costs — everything runs locally.
-
-**Live demo:** [document-classifier-6hyi.vercel.app](https://document-classifier-6hyi.vercel.app) · Backend su Railway · Frontend su Vercel
+**Live demo:** [document-classifier-6hyi.vercel.app](https://document-classifier-6hyi.vercel.app) · Backend on Railway · Frontend on Vercel
 
 ---
 
-## Features
+## Screenshots
 
-- **Automatic classification** — Submit a document and get an instant category prediction with a confidence score
-- **Confidence score with color** — Green > 80%, yellow 50–80%, red < 50% for immediate quality feedback
-- **Document management** — Filterable table with inline category editing
-- **Manual review workflow** — Correct any prediction; reviewed documents are visually highlighted
-- **Statistics dashboard** — Real-time category distribution with proportional bar charts
-- **REST API** — Fully documented via Swagger UI and ReDoc
-- **Demo data** — 15 pre-loaded example documents (3 per category) visible on first visit
+![Form](docs/screenshot-form.jpg)
+![Stats](docs/screenshot-stats.jpg)
+![Table](docs/screenshot-table.jpg)
 
 ---
 
@@ -26,9 +20,18 @@ No external APIs, no cloud ML services, no infrastructure costs — everything r
 |---|---|
 | Frontend | React 18 + Vite 5 |
 | Backend | Python 3.11 + FastAPI |
-| Database | SQLite + SQLModel (ORM) |
-| ML Pipeline | scikit-learn — TF-IDF + Logistic Regression |
-| Model serialization | joblib |
+| Database | SQLite + SQLModel |
+| ML | scikit-learn — TF-IDF + Logistic Regression |
+
+---
+
+## Features
+
+- **Auto-classification** — instant category prediction with confidence score (color-coded green/yellow/red)
+- **Manual review** — correct any prediction inline; reviewed rows are highlighted
+- **Statistics dashboard** — animated pie chart + distribution table
+- **15 pre-loaded demo documents** — dashboard is populated on first visit
+- **REST API** — documented via Swagger UI at `/docs`
 
 ---
 
@@ -37,117 +40,41 @@ No external APIs, no cloud ML services, no infrastructure costs — everything r
 | Category | Description |
 |---|---|
 | `fattura` | Invoices, credit notes, payment reminders |
-| `supporto_tecnico` | IT support requests, fault reports, credential resets |
-| `richiesta_commerciale` | Quote requests, supply inquiries, commercial questions |
-| `reclamo` | Formal complaints, service issues, refund requests |
-| `altro` | General communications, administrative documents |
+| `supporto_tecnico` | IT support requests, fault reports |
+| `richiesta_commerciale` | Quote requests, commercial inquiries |
+| `reclamo` | Complaints, refund requests |
+| `altro` | General communications |
 
-The model is trained on 125 labeled Italian-language examples and achieves ~92% accuracy on the test set.
-
----
-
-## Project Structure
-
-```
-document-classifier/
-├── start.sh                      # Quick start (Git Bash / macOS / Linux)
-├── start.bat                     # Quick start (Windows CMD)
-├── backend/
-│   ├── main.py                   # FastAPI app, CORS, lifespan
-│   ├── database.py               # SQLModel engine & session
-│   ├── models.py                 # Document table
-│   ├── schemas.py                # Pydantic request/response schemas
-│   ├── classifier.py             # Model loading + prediction
-│   ├── seed.py                   # Pre-populates DB with 15 example documents
-│   ├── requirements.txt
-│   ├── .env.example
-│   ├── routers/
-│   │   ├── documents.py          # POST classify · GET list · PATCH review
-│   │   └── stats.py              # GET stats/categories
-│   └── ml/
-│       ├── training.py           # Training script
-│       └── data/
-│           └── sample_data.csv   # 125 labeled examples
-└── frontend/
-    └── src/
-        ├── App.jsx
-        ├── api/client.js         # HTTP client
-        └── components/
-            ├── DocForm.jsx       # Document submission form
-            ├── DocTable.jsx      # Table with filter, inline edit and confidence colors
-            └── Stats.jsx         # Category stats with bar charts
-```
+Trained on 125 labeled Italian-language examples — ~92% accuracy on test set.
 
 ---
 
 ## Getting Started
 
-### Prerequisites
-- Python 3.10+
-- Node.js 18+
-
-### 1. Configure environment variables
+**Prerequisites:** Python 3.10+, Node.js 18+
 
 ```bash
+# 1. Backend
 cd backend
-cp .env.example .env
-```
-
-The default `.env` uses SQLite — no database server needed:
-```
-DATABASE_URL=sqlite:///./database.db
-```
-
-### 2. Train the ML model
-
-```bash
-cd backend
+cp .env.example .env          # default uses SQLite, no setup needed
 python -m venv .venv
-source .venv/Scripts/activate  # Windows Git Bash
-# or: source .venv/bin/activate  (macOS/Linux)
-
+source .venv/Scripts/activate # macOS/Linux: source .venv/bin/activate
 pip install -r requirements.txt
-python ml/training.py
+python ml/training.py         # train the ML model
+python seed.py                # optional: load 15 example documents
+
+# 2. Frontend
+cd frontend && npm install
+
+# 3. Start both
+bash start.sh    # macOS / Linux / Git Bash
+start.bat        # Windows CMD
 ```
-
-### 3. (Optional) Seed the database with example documents
-
-```bash
-python seed.py
-```
-
-### 4. Install frontend dependencies
-
-```bash
-cd frontend
-npm install
-```
-
-### 5. Start the app
-
-**Quick start (recommended):**
-```bash
-bash start.sh       # Git Bash / macOS / Linux
-start.bat           # Windows CMD
-```
-
-**Manual (two terminals):**
-```bash
-# Terminal 1 — Backend
-cd backend && uvicorn main:app --reload
-
-# Terminal 2 — Frontend
-cd frontend && npm run dev
-```
-
-### URLs
 
 | Service | URL |
 |---|---|
 | Frontend | http://localhost:5173 |
-| Backend API | http://localhost:8000 |
-| Swagger UI | http://localhost:8000/docs |
-| ReDoc | http://localhost:8000/redoc |
+| API docs | http://localhost:8000/docs |
 
 ---
 
@@ -156,29 +83,12 @@ cd frontend && npm run dev
 | Method | Endpoint | Description |
 |---|---|---|
 | `POST` | `/documents/classify` | Classify and save a document |
-| `GET` | `/documents` | List documents (supports `?category=fattura`) |
-| `PATCH` | `/documents/{id}/review` | Manually correct a category |
+| `GET` | `/documents` | List documents (`?category=fattura`) |
+| `PATCH` | `/documents/{id}/review` | Correct a predicted category |
 | `GET` | `/stats/categories` | Document count per category |
-| `GET` | `/health` | Health check — returns server status and model state |
+| `GET` | `/health` | Health check |
 
-**Example — classify a document:**
-
-```bash
-curl -X POST http://localhost:8000/documents/classify \
-  -H "Content-Type: application/json" \
-  -d '{"title": "Fattura marzo", "raw_text": "Allego fattura n. 2024/0312 per la fornitura di marzo."}'
-```
-
-```json
-{
-  "id": 1,
-  "title": "Fattura marzo",
-  "predicted_category": "fattura",
-  "confidence_score": 0.94,
-  "status": "new",
-  "created_at": "2024-03-15T10:30:00"
-}
-```
+---
 
 ## License
 
